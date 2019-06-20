@@ -1,8 +1,4 @@
-<p>
-  Login your credentials!
-</p>
-
-<form #form='ngForm' autocomplete="off" class="mb-4">
+<form #form='ngForm' autocomplete="off" class="mb-4" (submit)="onSubmit(form)">
   <div class="form-group">
       <label>Username</label>
       <input class="form-control" #UserName="ngModel" name="UserName" [(ngModel)]="formModel.UserName" required>

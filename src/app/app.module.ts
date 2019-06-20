@@ -7,6 +7,8 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { LoginService } from './Services/login.service';
 
  
 
@@ -15,16 +17,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     UserComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+    
+
   ],
-  providers: [],
+  providers: [LoginService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
