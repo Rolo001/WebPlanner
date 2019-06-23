@@ -9,6 +9,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { LoginService } from './Services/login.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
  
 
@@ -18,6 +19,7 @@ import { LoginService } from './Services/login.service';
     UserComponent,
     LoginComponent,
     RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
