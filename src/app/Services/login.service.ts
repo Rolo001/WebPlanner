@@ -12,6 +12,8 @@ export class LoginService {
   
   LogIn(formData)
   {
-    return this.http.post("https://localhost:44370/api/user/user/LoginTest",formData);
+    // this is how you communicate with the gates within your API. You may return HTTP responses to handle errors and requests.
+    console.log(formData);
+    return this.http.post("https://localhost:44370/api/user/user/LoginTest", formData);
   }
 }

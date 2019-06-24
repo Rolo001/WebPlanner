@@ -25,7 +25,7 @@ formModel = {
         console.log(res);
         localStorage.setItem('userOnline', res.value)
         console.log('setItem: OK');
-        this.router.navigateByUrl('user/register');
+        this.router.navigateByUrl('dashboard');
       }
     );
     }
