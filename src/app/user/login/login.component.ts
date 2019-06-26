@@ -23,9 +23,16 @@ formModel = {
     this.service.LogIn(form.value).subscribe(
       (res:any)=>{
         console.log(res);
-        localStorage.setItem('userOnline', res.value)
-        console.log('setItem: OK');
-        this.router.navigateByUrl('dashboard');
+        if(res)
+        {
+          this.router.navigateByUrl('dashboard');
+          localStorage.setItem('userOnline', res.value)
+          console.log('setItem: OK');
+        }
+        else
+        {
+          this.router.navigateByUrl('user/register');
+        }
       }
     );
     }
