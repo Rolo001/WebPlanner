@@ -1,28 +1,26 @@
-  <form class="mb-4">
+  <form #form='ngForm' class="mb-4" (submit)="onRegister(form)">
     <div class="form-group">
       <label>Email</label>
-      <input class="form-control" #Email="ngModel" name="EmailName" [(ngModel)]="formModel.UserName" required>
+      <input class="form-control" #Email="ngModel" name="EmailName" [(ngModel)]="formModel.Email" required>
     </div>
     <div class="form-group">
       <label>First Name</label>
-      <input class="form-control" #FirstName="ngModel" name="FirstName" [(ngModel)]="formModel.UserName" required>
+      <input class="form-control" #FirstName="ngModel" name="FirstName" [(ngModel)]="formModel.FirstName" required>
     </div>
     <div class="form-group">
       <label>Last Name</label>
-      <input class="form-control" #LastName="ngModel" name="LastName" [(ngModel)]="formModel.UserName" required>
+      <input class="form-control" #LastName="ngModel" name="LastName" [(ngModel)]="formModel.LastName" required>
     </div>
     <div class="form-group">
       <label>Password</label>
-      <input class="form-control" #Password="ngModel" name="Password" [(ngModel)]="formModel.UserName" required>
+      <input class="form-control" #Password="ngModel" name="Password" [(ngModel)]="formModel.Password" required>
     </div>
     <div class="form-group">
       <label>Confirm Password</label>
-      <input class="form-control" #ConfirmPassword="ngModel" name="ConfirmPassword" [(ngModel)]="formModel.UserName" required>
-    </div>
+      <input class="form-control" #ConfirmPassword="ngModel" name="ConfirmPassword" [(ngModel)]="formModel.ConfirmPassword" required>
+    </div> 
 
-
-    
     <div class="form-row">
-      <button  type="submit" class="btn btn-lg btn-block" [disabled]="form.invalid">Register</button>
+      <button  type="submit" class="btn btn-lg btn-block" >Register</button>
     </div>
   </form>

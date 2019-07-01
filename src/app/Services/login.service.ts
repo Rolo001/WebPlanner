@@ -8,10 +8,9 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  constructor(private http:HttpClient) { }
-  
-  LogIn(formData)
-  {
+  constructor(private http: HttpClient) { }
+
+  LogIn(formData) {
     // this is how you communicate with the gates within your API. You may return HTTP responses to handle errors and requests.
     console.log(formData);
     return this.http.post("https://localhost:44370/api/user/Login", formData);
