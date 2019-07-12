@@ -19,8 +19,7 @@ formModel = {
   }
 
   onSubmit(form:NgForm) {
-    console.log("OnSubmit has been excuted.");
-    this.service.LogIn(form.value).subscribe(
+      this.service.LogIn(form.value).subscribe(
       (res:any)=>{
         console.log(res);
         if(res)
@@ -35,5 +34,5 @@ formModel = {
         }
       }
     );
-    }
+  }
 }

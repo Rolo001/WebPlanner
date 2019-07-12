@@ -1,3 +1,9 @@
+<script>
+  $(document).ready(function(){
+    $('.toast').toast('show');
+  });
+</script>
+
 <div class="wrapper">
   <div class="wrapped-div">
     <div class="tab-header">
@@ -9,5 +15,14 @@
         <router-outlet></router-outlet>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="toast">
+  <div class="toast-header">
+    Toast Header
+  </div>
+  <div class="toast-body">
+    Some text inside the toast body
   </div>
 </div>
